@@ -4,6 +4,10 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageView;
+import android.widget.TextView;
+
+import com.example.md2.magicmuseum.data.Country;
 
 /**
  * Created by md2 on 04/08/2015.
@@ -12,9 +16,14 @@ public class CountryActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_coutry);
+        setContentView(R.layout.activity_country);
 
+        Country country = new Country();
+        ImageView image = (ImageView) findViewById(R.id.ImageViewCountry);
+        image.setImageResource(country.getImage());
 
+        TextView description = (TextView) findViewById(R.id.DescCountry);
+        description.setText(country.getDescription());
     }
 
     @Override
