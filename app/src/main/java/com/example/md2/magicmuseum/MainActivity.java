@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
         CountryList count = new CountryList();
         ArrayList<Integer> ids = count.getIds();
 
-
+        System.out.println(ids);
     }
 
     @Override
