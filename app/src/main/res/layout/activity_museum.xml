@@ -3,4 +3,20 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent" android:background="@mipmap/couloir">
 
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/flecheHaut"
+        android:src="@mipmap/fleche_haut"
+        android:background="@null"
+        />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/flecheBas"
+        android:src="@mipmap/fleche_bas"
+        android:background="@null"
+        />
 </LinearLayout>
