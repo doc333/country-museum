@@ -14,9 +14,16 @@ public class Country {
     private int image;
     private String name;
     private String description;
+    private String capital;
+    private String population;
+    private String climat;
 
-    public Country() {this(0, 0, 0, 0, 0, "", "");}
-    public Country(int id, int img_teaser_big, int img_teaser_medium, int img_teaser_min, int image, String name, String description) {
+    public Country() {
+        this(0, 0, 0, 0, 0, "", "", "", "", "");
+    }
+
+    public Country(int id, int img_teaser_big, int img_teaser_medium, int img_teaser_min, int image, String name, String description, String capital, String population, String climat) {
+
         this.id = id;
         this.img_teaser_big = img_teaser_big;
         this.img_teaser_medium = img_teaser_medium;
@@ -24,6 +31,34 @@ public class Country {
         this.image = image;
         this.name = name;
         this.description = description;
+        this.capital = capital;
+        this.population = population;
+        this.climat = climat;
+    }
+
+    public void setCapital(String capital) {
+        this.capital = capital;
+    }
+
+    public void setPopulation(String population) {
+        this.population = population;
+    }
+
+    public void setClimat(String climat) {
+        this.climat = climat;
+    }
+
+    public String getCapital() {
+
+        return capital;
+    }
+
+    public String getPopulation() {
+        return population;
+    }
+
+    public String getClimat() {
+        return climat;
     }
 
     public int getId() {
