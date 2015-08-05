@@ -14,10 +14,9 @@ public class Country {
     private int image;
     private String name;
     private String description;
-    private Set<Comment> comments;
 
-    public Country() {this(0, 0, 0, 0, 0, "", "", new HashSet<Comment>());}
-    public Country(int id, int img_teaser_big, int img_teaser_medium, int img_teaser_min, int image, String name, String description, Set<Comment> comments) {
+    public Country() {this(0, 0, 0, 0, 0, "", "");}
+    public Country(int id, int img_teaser_big, int img_teaser_medium, int img_teaser_min, int image, String name, String description) {
         this.id = id;
         this.img_teaser_big = img_teaser_big;
         this.img_teaser_medium = img_teaser_medium;
@@ -25,7 +24,6 @@ public class Country {
         this.image = image;
         this.name = name;
         this.description = description;
-        this.comments = comments;
     }
 
     public int getId() {
@@ -82,17 +80,5 @@ public class Country {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public Set<Comment> getComments() {
-        return comments;
-    }
-
-    public void setComments(Set<Comment> comments) {
-        this.comments = comments;
-    }
-
-    public void addComment(Comment comment) {
-        this.comments.add(comment);
     }
 }
