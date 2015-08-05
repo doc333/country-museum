@@ -4,6 +4,7 @@
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
 
+    <string name="startMuseum">Entrer au musée</string>
     <string name="ButtonPrev">Pays précédent</string>
     <string name="ButtonNext">Pays suivant</string>
 </resources>
