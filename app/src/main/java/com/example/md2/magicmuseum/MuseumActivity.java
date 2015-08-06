@@ -51,7 +51,21 @@ public class MuseumActivity extends AppCompatActivity {
             countries.getCountryList().iterator().next();
             int countryId = c.getId();
             ImageView image = (ImageView) findViewById(this.getResources().getIdentifier("imageView" + i, "id", this.getPackageName()));
-            image.setImageResource(this.getResources().getIdentifier("big_" + countryId, "mipmap", this.getPackageName()));
+
+            String size = "";
+            switch (i) {
+                case 1:
+                    size = "big";
+                    break;
+                case 2:
+                    size = "medium";
+                    break;
+                default:
+                    size = "small";
+                    break;
+            }
+
+            image.setImageResource(this.getResources().getIdentifier(size + "_" + countryId, "mipmap", this.getPackageName()));
         }
     }
 
