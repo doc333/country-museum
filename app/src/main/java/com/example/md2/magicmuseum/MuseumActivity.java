@@ -11,10 +11,6 @@ import com.example.md2.magicmuseum.data.CountryList;
 import java.util.ListIterator;
 import android.view.View;
 
-import com.example.md2.magicmuseum.data.Country;
-import com.example.md2.magicmuseum.data.CountryList;
-
-import java.util.ArrayList;
 
 /**
  * Created by admin on 04/08/2015.
@@ -28,7 +24,13 @@ public class MuseumActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_museum);
         countries = new CountryList();
+        setCouloir();
 
+    }
+
+
+    public void setCouloir()
+    {
         ListIterator<Country> iterator = countries.getCountryList().listIterator(currentCountryIndex);
         int i = 0;
         while(i < 3 && iterator.hasNext())
@@ -40,6 +42,32 @@ public class MuseumActivity extends AppCompatActivity {
             ImageView image = (ImageView) findViewById(this.getResources().getIdentifier("imageView" + i, "id", this.getPackageName()));
             image.setImageResource(this.getResources().getIdentifier("big_" + countryId, "mipmap", this.getPackageName()));
         }
+    }
+
+    public boolean hasNextCountry()
+    {
+        return currentCountryIndex < countries.getCountryList().size();
+    }
+
+    public boolean hasPreviousCountry()
+    {
+        return currentCountryIndex > 0;
+    }
+
+    public void nextCountry(View view)
+    {
+        if(hasNextCountry()) {
+            currentCountryIndex++;
+        }
+        setCouloir();
+    }
+
+    public void previousCountry(View view)
+    {
+        if(hasPreviousCountry()) {
+            currentCountryIndex--;
+        }
+        setCouloir();
     }
 
     @Override
