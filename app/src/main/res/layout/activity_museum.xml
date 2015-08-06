@@ -9,7 +9,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="500px"
-        android:paddingLeft="1850px" />
+        android:paddingLeft="1850px"
+        android:onClick="activityCountry" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -48,11 +49,5 @@
             android:layout_below="@id/flecheHaut"
             />
     </RelativeLayout>
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/country_1"
-        android:layout_gravity="right|center_vertical" />
 
 </FrameLayout>

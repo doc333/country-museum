@@ -1,14 +1,13 @@
 package com.example.md2.magicmuseum;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
-
 import com.example.md2.magicmuseum.data.Country;
-
 import com.example.md2.magicmuseum.data.CountryList;
-
 import java.util.ListIterator;
+import android.view.View;
 
 /**
  * Created by admin on 04/08/2015.
@@ -34,5 +33,10 @@ public class MuseumActivity extends AppCompatActivity {
             ImageView image = (ImageView) findViewById(this.getResources().getIdentifier("imageView" + i, "id", this.getPackageName()));
             image.setImageResource(this.getResources().getIdentifier("big_" + countryId, "mipmap", this.getPackageName()));
         }
+    }
+
+    public void activityCountry(View view) {
+        Intent intent = new Intent(MuseumActivity.this, CountryActivity.class);
+        startActivity(intent);
     }
 }
