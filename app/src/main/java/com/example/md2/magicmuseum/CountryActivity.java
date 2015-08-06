@@ -74,6 +74,6 @@ public class CountryActivity extends AppCompatActivity {
         image.setImageResource(country.getImage());
 
         TextView description = (TextView) findViewById(R.id.DescCountry);
-        description.setText(country.getDescription());
+        description.setText(country.getName());
     }
 }

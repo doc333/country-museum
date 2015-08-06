@@ -12,6 +12,7 @@
         android:layout_height="wrap_content"
         android:paddingTop="500px"
         android:paddingLeft="1850px"
+        android:onClick="activityCountry"
         android:src="@mipmap/big_1" />
 
     <ImageView

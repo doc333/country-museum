@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity {
 
         public void startMuseum(View view)
         {
-                Intent intent = new Intent(MainActivity.this, MuseumActivity.class);
-                startActivity(intent);
+            Intent intent = new Intent(MainActivity.this, MuseumActivity.class);
+            startActivity(intent);
         }
 }
