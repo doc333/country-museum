@@ -28,10 +28,21 @@ public class MuseumActivity extends AppCompatActivity {
 
     }
 
+    public void cleanCouloir()
+    {
+        int i = 0;
+        while(i < 3)
+        {
+            i++;
+            ImageView image = (ImageView) findViewById(this.getResources().getIdentifier("imageView" + i, "id", this.getPackageName()));
+            image.setImageResource(android.R.color.transparent);
+        }
+    }
 
     public void setCouloir()
     {
         ListIterator<Country> iterator = countries.getCountryList().listIterator(currentCountryIndex);
+        cleanCouloir();
         int i = 0;
         while(i < 3 && iterator.hasNext())
         {
