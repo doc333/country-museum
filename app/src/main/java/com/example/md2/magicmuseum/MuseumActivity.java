@@ -94,7 +94,7 @@ public class MuseumActivity extends AppCompatActivity {
 
     public boolean hasNextCountry()
     {
-        return currentCountryIndex < countries.getCountryList().size();
+        return currentCountryIndex < countries.getCountryList().size() - 1;
     }
 
     public boolean hasPreviousCountry()
