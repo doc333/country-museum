@@ -4,26 +4,31 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.md2.magicmuseum.data.Country;
+import com.example.md2.magicmuseum.data.CountryList;
+
+import java.util.ArrayList;
 
 /**
  * Created by md2 on 04/08/2015.
  */
 public class CountryActivity extends AppCompatActivity {
+
+    private CountryList countryList;
+    private int index=0;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_country);
 
-        Country country = new Country();
-        ImageView image = (ImageView) findViewById(R.id.ImageViewCountry);
-        image.setImageResource(country.getImage());
+        countryList = new CountryList();
+        displayCountry();
 
-        TextView description = (TextView) findViewById(R.id.DescCountry);
-        description.setText(country.getDescription());
     }
 
     @Override
@@ -46,5 +51,29 @@ public class CountryActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void nextCountry(View view) {
+        if (!countryList.getCountryList().isEmpty() && index < countryList.getCountryList().size()) {
+            index += 1;
+            displayCountry();
+        }
+    }
+
+    public void prevCountry(View view) {
+        if (!countryList.getCountryList().isEmpty() && index >= 0) {
+            index -= 1;
+            displayCountry();
+        }
+    }
+
+    public void displayCountry() {
+        Country country = countryList.getCountryById(index);
+
+        ImageView image = (ImageView) findViewById(R.id.ImageViewCountry);
+        image.setImageResource(country.getImage());
+
+        TextView description = (TextView) findViewById(R.id.DescCountry);
+        description.setText(country.getDescription());
     }
 }
