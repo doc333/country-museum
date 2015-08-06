@@ -21,7 +21,13 @@ public class MuseumActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_museum);
         countries = new CountryList();
+        setCouloir();
 
+    }
+
+
+    public void setCouloir()
+    {
         ListIterator<Country> iterator = countries.getCountryList().listIterator(currentCountryIndex);
         int i = 0;
         while(i < 3 && iterator.hasNext())
@@ -35,6 +41,32 @@ public class MuseumActivity extends AppCompatActivity {
         }
     }
 
+
+    public boolean hasNextCountry()
+    {
+        return currentCountryIndex < countries.getCountryList().size();
+    }
+
+    public boolean hasPreviousCountry()
+    {
+        return currentCountryIndex > 0;
+    }
+
+    public void nextCountry(View view)
+    {
+        if(hasNextCountry()) {
+            currentCountryIndex++;
+        }
+        setCouloir();
+    }
+
+    public void previousCountry(View view)
+    {
+        if(hasPreviousCountry()) {
+            currentCountryIndex--;
+        }
+        setCouloir();
+    }
     public void activityCountry(View view) {
         Intent intent = new Intent(MuseumActivity.this, CountryActivity.class);
         startActivity(intent);

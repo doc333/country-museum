@@ -38,6 +38,7 @@
             android:src="@mipmap/fleche_haut"
             android:background="@null"
             android:layout_marginBottom="10dp"
+            android:onClick="nextCountry"
             />
 
         <ImageButton
@@ -47,6 +48,7 @@
             android:src="@mipmap/fleche_bas"
             android:background="@null"
             android:layout_below="@id/flecheHaut"
+            android:onClick="previousCountry"
             />
     </RelativeLayout>
 
