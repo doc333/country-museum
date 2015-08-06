@@ -73,7 +73,19 @@ public class CountryActivity extends AppCompatActivity {
         ImageView image = (ImageView) findViewById(R.id.ImageViewCountry);
         image.setImageResource(country.getImage());
 
-        TextView description = (TextView) findViewById(R.id.DescCountry);
-        description.setText(country.getName());
+        TextView name = (TextView) findViewById(R.id.CountryName);
+        name.setText(country.getName());
+
+        TextView capital = (TextView) findViewById(R.id.CountryCapital);
+        capital.setText(country.getCapital());
+
+        TextView population = (TextView) findViewById(R.id.CountryPopulation);
+        population.setText(country.getPopulation());
+
+        TextView climat = (TextView) findViewById(R.id.CountryClimat);
+        climat.setText(country.getClimat());
+
+        TextView description = (TextView) findViewById(R.id.CountryDescription);
+        description.setText(country.getDescription());
     }
 }
