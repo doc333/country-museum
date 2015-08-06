@@ -29,14 +29,14 @@
 
         <Button
             android:id="@+id/ButtonPrevCountry"
-            android:text="@string/ButtonPrev"
+            android:text="@string/buttonPrev"
             android:onClick="prevCountry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
 
         <Button
             android:id="@+id/ButtonNextCountry"
-            android:text="@string/ButtonNext"
+            android:text="@string/buttonNext"
             android:onClick="nextCountry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />

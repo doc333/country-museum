@@ -7,6 +7,7 @@ import android.view.MenuItem;
 import android.content.Intent;
 import android.view.View;
 
+import com.example.md2.magicmuseum.data.Country;
 import com.example.md2.magicmuseum.data.CountryList;
 
 import java.util.ArrayList;
