@@ -142,7 +142,11 @@ public class MuseumActivity extends AppCompatActivity {
             return true;
         }
         if (id == R.id.action_country_listview) {
-            Intent intent = new Intent(MuseumActivity.this, CountryList.class);
+            Intent intent = new Intent(MuseumActivity.this, CountryListActivity.class);
+            startActivity(intent);
+        }
+        if (id == R.id.action_museum) {
+            Intent intent = new Intent(MuseumActivity.this, MuseumActivity.class);
             startActivity(intent);
         }
 

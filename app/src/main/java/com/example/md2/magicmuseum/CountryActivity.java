@@ -1,5 +1,6 @@
 package com.example.md2.magicmuseum;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -53,6 +54,14 @@ public class CountryActivity extends AppCompatActivity {
         //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
+        }
+        if (id == R.id.action_country_listview) {
+            Intent intent = new Intent(CountryActivity.this, CountryListActivity.class);
+            startActivity(intent);
+        }
+        if (id == R.id.action_museum) {
+            Intent intent = new Intent(CountryActivity.this, MuseumActivity.class);
+            startActivity(intent);
         }
 
         return super.onOptionsItemSelected(item);

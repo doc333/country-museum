@@ -8,4 +8,5 @@
     <string name="buttonPrev">Pays précédent</string>
     <string name="buttonNext">Pays suivant</string>
     <string name="menuListCountry">Liste des pays</string>
+    <string name="menuListMuseum">Musée</string>
 </resources>

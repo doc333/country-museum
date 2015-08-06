@@ -8,10 +8,8 @@ import java.util.Set;
  */
 public class Country {
     private int id;
-    private int img_teaser_big;
-    private int img_teaser_medium;
-    private int img_teaser_min;
     private int image;
+    private int imageList;
     private String name;
     private String description;
     private String capital;
@@ -19,21 +17,27 @@ public class Country {
     private String climat;
 
     public Country() {
-        this(0, 0, 0, 0, 0, "", "", "", "", "");
+        this(0, 0, 0, "", "", "", "", "");
     }
 
-    public Country(int id, int img_teaser_big, int img_teaser_medium, int img_teaser_min, int image, String name, String description, String capital, String population, String climat) {
+    public Country(int id, int imageList, int image, String name, String description, String capital, String population, String climat) {
 
         this.id = id;
-        this.img_teaser_big = img_teaser_big;
-        this.img_teaser_medium = img_teaser_medium;
-        this.img_teaser_min = img_teaser_min;
         this.image = image;
+        this.imageList = imageList;
         this.name = name;
         this.description = description;
         this.capital = capital;
         this.population = population;
         this.climat = climat;
+    }
+
+    public int getImageList() {
+        return imageList;
+    }
+
+    public void setImageList(int imageList) {
+        this.imageList = imageList;
     }
 
     public void setCapital(String capital) {
@@ -67,30 +71,6 @@ public class Country {
 
     public void setId(int id) {
         this.id = id;
-    }
-
-    public int getImg_teaser_big() {
-        return img_teaser_big;
-    }
-
-    public void setImg_teaser_big(int img_teaser_big) {
-        this.img_teaser_big = img_teaser_big;
-    }
-
-    public int getImg_teaser_medium() {
-        return img_teaser_medium;
-    }
-
-    public void setImg_teaser_medium(int img_teaser_medium) {
-        this.img_teaser_medium = img_teaser_medium;
-    }
-
-    public int getImg_teaser_min() {
-        return img_teaser_min;
-    }
-
-    public void setImg_teaser_min(int img_teaser_min) {
-        this.img_teaser_min = img_teaser_min;
     }
 
     public int getImage() {
