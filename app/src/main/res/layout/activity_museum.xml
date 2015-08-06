@@ -9,24 +9,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="500px"
-        android:paddingLeft="1850px"
-        android:src="@mipmap/big_1" />
+        android:paddingLeft="1850px" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="520px"
-        android:paddingLeft="1350px"
-        android:src="@mipmap/big_1" />
+        android:paddingLeft="1350px" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:paddingTop="540px"
-        android:paddingLeft="1000px"
-        android:src="@mipmap/big_1" />
+        android:paddingLeft="1000px" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
