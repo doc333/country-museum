@@ -136,14 +136,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="prevCountry"
-            android:text="@string/ButtonPrev" />
+            android:text="@string/buttonPrev" />
 
         <Button
             android:id="@+id/ButtonNextCountry"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="nextCountry"
-            android:text="@string/ButtonNext" />
+            android:text="@string/buttonNext" />
 
     </LinearLayout>
 
