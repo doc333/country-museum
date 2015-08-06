@@ -16,15 +16,15 @@
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="520px"
-        android:paddingLeft="1350px" />
+        android:paddingTop="590px"
+        android:paddingLeft="1395px"/>
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="540px"
-        android:paddingLeft="1000px" />
+        android:paddingTop="630px"
+        android:paddingLeft="1200px"/>
 
     <RelativeLayout
         android:layout_width="wrap_content"
