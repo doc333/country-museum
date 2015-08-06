@@ -8,24 +8,24 @@
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="200px"
-        android:paddingLeft="850px"
+        android:paddingTop="500px"
+        android:paddingLeft="1850px"
         android:src="@mipmap/big_1" />
 
     <ImageView
         android:id="@+id/imageView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="220px"
-        android:paddingLeft="600px"
+        android:paddingTop="520px"
+        android:paddingLeft="1350px"
         android:src="@mipmap/big_1" />
 
     <ImageView
         android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="240px"
-        android:paddingLeft="300px"
+        android:paddingTop="540px"
+        android:paddingLeft="1000px"
         android:src="@mipmap/big_1" />
 
     <RelativeLayout
