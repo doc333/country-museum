@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import com.example.md2.magicmuseum.data.Country;
 import com.example.md2.magicmuseum.data.CountryList;
@@ -29,10 +30,43 @@ public class MuseumActivity extends AppCompatActivity {
 
     }
 
+    public void cleanCouloir()
+    {
+        int i = 0;
+        while(i < 3)
+        {
+            i++;
+            ImageView image = (ImageView) findViewById(this.getResources().getIdentifier("imageView" + i, "id", this.getPackageName()));
+            image.setImageResource(android.R.color.transparent);
+        }
+    }
+
+    public void setButtons()
+    {
+        ImageButton up = (ImageButton) findViewById(R.id.flecheHaut);
+        ImageButton down = (ImageButton) findViewById(R.id.flecheBas);
+
+        if(hasNextCountry()){
+            up.setVisibility(View.VISIBLE);
+        }
+        else{
+            up.setVisibility(View.INVISIBLE);
+        }
+
+        if(hasPreviousCountry()){
+            down.setVisibility(View.VISIBLE);
+        }
+        else{
+            down.setVisibility(View.INVISIBLE);
+        }
+
+    }
 
     public void setCouloir()
     {
         ListIterator<Country> iterator = countries.getCountryList().listIterator(currentCountryIndex);
+        cleanCouloir();
+        setButtons();
         int i = 0;
         countryClickId = iterator.next().getId();
         iterator.previous();
@@ -43,13 +77,27 @@ public class MuseumActivity extends AppCompatActivity {
             countries.getCountryList().iterator().next();
             int countryId = c.getId();
             ImageView image = (ImageView) findViewById(this.getResources().getIdentifier("imageView" + i, "id", this.getPackageName()));
-            image.setImageResource(this.getResources().getIdentifier("big_" + countryId, "mipmap", this.getPackageName()));
+
+            String size = "";
+            switch (i) {
+                case 1:
+                    size = "big";
+                    break;
+                case 2:
+                    size = "medium";
+                    break;
+                default:
+                    size = "small";
+                    break;
+            }
+
+            image.setImageResource(this.getResources().getIdentifier(size + "_" + countryId, "mipmap", this.getPackageName()));
         }
     }
 
     public boolean hasNextCountry()
     {
-        return currentCountryIndex < countries.getCountryList().size();
+        return currentCountryIndex < countries.getCountryList().size() - 1;
     }
 
     public boolean hasPreviousCountry()
