@@ -4,6 +4,29 @@
     android:layout_height="match_parent" android:background="@mipmap/couloir">
 
 
+     <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="200px"
+        android:paddingLeft="850px"
+        android:src="@mipmap/big_1" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="220px"
+        android:paddingLeft="600px"
+        android:src="@mipmap/big_1" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="240px"
+        android:paddingLeft="300px"
+        android:src="@mipmap/big_1" />
 
     <RelativeLayout
         android:layout_width="wrap_content"
@@ -34,25 +57,5 @@
         android:layout_height="wrap_content"
         android:id="@+id/country_1"
         android:layout_gravity="right|center_vertical" />
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_gravity="center">
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/country_2"
-            />
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/country_3"
-            android:layout_toLeftOf="@id/country_2"
-            />
-
-    </RelativeLayout>
 
 </FrameLayout>
