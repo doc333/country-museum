@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import com.example.md2.magicmuseum.data.Country;
 import com.example.md2.magicmuseum.data.CountryList;
@@ -39,10 +40,32 @@ public class MuseumActivity extends AppCompatActivity {
         }
     }
 
+    public void setButtons()
+    {
+        ImageButton up = (ImageButton) findViewById(R.id.flecheHaut);
+        ImageButton down = (ImageButton) findViewById(R.id.flecheBas);
+
+        if(hasNextCountry()){
+            up.setVisibility(View.VISIBLE);
+        }
+        else{
+            up.setVisibility(View.INVISIBLE);
+        }
+
+        if(hasPreviousCountry()){
+            down.setVisibility(View.VISIBLE);
+        }
+        else{
+            down.setVisibility(View.INVISIBLE);
+        }
+
+    }
+
     public void setCouloir()
     {
         ListIterator<Country> iterator = countries.getCountryList().listIterator(currentCountryIndex);
         cleanCouloir();
+        setButtons();
         int i = 0;
         while(i < 3 && iterator.hasNext())
         {
