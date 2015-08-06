@@ -26,6 +26,11 @@ public class CountryActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_country);
 
+        Bundle extras = getIntent().getExtras();
+        if (extras != null) {
+            index = extras.getInt("countryId");
+        }
+
         countryList = new CountryList();
         displayCountry();
 
@@ -61,7 +66,7 @@ public class CountryActivity extends AppCompatActivity {
     }
 
     public void prevCountry(View view) {
-        if (!countryList.getCountryList().isEmpty() && index >= 0) {
+        if (!countryList.getCountryList().isEmpty() && index > 1) {
             index -= 1;
             displayCountry();
         }

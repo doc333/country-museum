@@ -19,6 +19,7 @@ public class MuseumActivity extends AppCompatActivity {
 
     private CountryList countries;
     private int currentCountryIndex = 0;
+    private int countryClickId = 0;
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,6 +34,8 @@ public class MuseumActivity extends AppCompatActivity {
     {
         ListIterator<Country> iterator = countries.getCountryList().listIterator(currentCountryIndex);
         int i = 0;
+        countryClickId = iterator.next().getId();
+        iterator.previous();
         while(i < 3 && iterator.hasNext())
         {
             i++;
@@ -58,6 +61,7 @@ public class MuseumActivity extends AppCompatActivity {
     {
         if(hasNextCountry()) {
             currentCountryIndex++;
+            countryClickId = countries.getCountryList().get(currentCountryIndex).getId();
         }
         setCouloir();
     }
@@ -66,6 +70,7 @@ public class MuseumActivity extends AppCompatActivity {
     {
         if(hasPreviousCountry()) {
             currentCountryIndex--;
+            countryClickId = countries.getCountryList().get(currentCountryIndex).getId();
         }
         setCouloir();
     }
@@ -98,6 +103,7 @@ public class MuseumActivity extends AppCompatActivity {
 
     public void activityCountry(View view) {
         Intent intent = new Intent(MuseumActivity.this, CountryActivity.class);
+        intent.putExtra("countryId", countryClickId);
         startActivity(intent);
     }
 }
