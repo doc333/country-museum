@@ -29,9 +29,11 @@ public class CountryActivity extends AppCompatActivity {
 
         Bundle extras = getIntent().getExtras();
         if (extras != null) {
+            // Get country id send by the other activity
             index = extras.getInt("countryId");
         }
 
+        // Initialize the List of countries
         countryList = new CountryList();
         displayCountry();
 
@@ -68,6 +70,7 @@ public class CountryActivity extends AppCompatActivity {
     }
 
     public void nextCountry(View view) {
+        // Display the next country
         if (!countryList.getCountryList().isEmpty() && index < countryList.getCountryList().size()) {
             index += 1;
             displayCountry();
@@ -75,6 +78,7 @@ public class CountryActivity extends AppCompatActivity {
     }
 
     public void prevCountry(View view) {
+        // Display the previous country
         if (!countryList.getCountryList().isEmpty() && index > 1) {
             index -= 1;
             displayCountry();
@@ -82,6 +86,7 @@ public class CountryActivity extends AppCompatActivity {
     }
 
     public void displayCountry() {
+        // Display all the info of the selected country
         Country country = countryList.getCountryById(index);
 
         ImageView image = (ImageView) findViewById(R.id.ImageViewCountry);

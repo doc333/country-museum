@@ -19,7 +19,9 @@ import android.view.View;
 public class MuseumActivity extends AppCompatActivity {
 
     private CountryList countries;
+    // Current index of the country array
     private int currentCountryIndex = 0;
+    // Current index of the country object
     private int countryClickId = 0;
 
     protected void onCreate(Bundle savedInstanceState) {
@@ -154,7 +156,9 @@ public class MuseumActivity extends AppCompatActivity {
     }
 
     public void activityCountry(View view) {
+        // On click on a country flag run activity to see the country description
         Intent intent = new Intent(MuseumActivity.this, CountryActivity.class);
+        // Send the id to the activity
         intent.putExtra("countryId", countryClickId);
         startActivity(intent);
     }

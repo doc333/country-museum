@@ -1,11 +1,6 @@
 package com.example.md2.magicmuseum.data;
 
-import java.util.HashSet;
-import java.util.Set;
 
-/**
- * Created by md2 on 04/08/2015.
- */
 public class Country {
     private int id;
     private int image;
